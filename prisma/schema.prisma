@@ -19,3 +19,14 @@ model User{
   email String @unique
   password String 
 }
+
+model Deck {
+  id        Int      @id @default(autoincrement())
+  deckName  String
+  cards     Json     // Array of cards with 'word' and 'meaning'
+  test      Json     // JSON for test-related data
+  learn     Json     // JSON for learn-related data
+  createdBy String
+  createdAt DateTime @default(now())
+}
+

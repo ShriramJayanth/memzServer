@@ -1,5 +1,6 @@
 import express from "express";
 import authRoutes from "./routes/auth.js";
+import cardRoutes from "./routes/card.js"
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -16,6 +17,7 @@ app.use(cors({
 }));
 
 app.use("/auth", authRoutes);
+app.use("/card",cardRoutes);
 
 const port = process.env.PORT || 3002;
 
